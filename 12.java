@@ -107,7 +107,7 @@ class assignmentTwelve
     // This is a solution to part (v)
     static void primeNumbers(int n)
     {
-      ArrayList<Integer> primes = new ArrayList();
+      ArrayList<Integer> primes = new ArrayList(); // the linter doesn't like this, but it works lol
       primes.add(2);
       int primeCounter = 1;
       for(int i = 3; i < n+1; i++){
