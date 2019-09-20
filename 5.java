@@ -8,9 +8,9 @@ class assignmentFive{
     if(player1Score == player2Score){
       JOptionPane.showMessageDialog(null, "There was a tie.");
     } else if (player1Score > player2Score){
-      JOptionPane.showMessageDialog(null, "The winning player, " + player1Name + ", scored " + String.valueOf(player1Score) + " points against " + player2Name + ".");
+      JOptionPane.showMessageDialog(null, "The winning player, " + player1Name + ", scored " + String.valueOf(player1Score-player2Score) + " points more than " + player2Name + ".");
     } else {
-      JOptionPane.showMessageDialog(null, "The winning player, " + player2Name + ", scored " + String.valueOf(player2Score) + " points against " + player1Name + ".");
+      JOptionPane.showMessageDialog(null, "The winning player, " + player2Name + ", scored " + String.valueOf(player2Score-player1Score) + " points more than " + player1Name + ".");
     }
   }
 }
