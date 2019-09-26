@@ -13,6 +13,7 @@ class assignmentNine
       int strLen=strInput.length();
       int bigLen=bigString.length();
       int loc=bigString.indexOf(strInput);
+      if (loc==-1) throw new Error("String does not occur");
       String before=bigString.substring(0, loc);
       String after=bigString.substring(loc + strLen, bigString.length());
 

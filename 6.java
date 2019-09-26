@@ -13,7 +13,7 @@ class assignmentSix{
     int value = (int)(Math.random()*(top-bottom)+bottom);
     JOptionPane.showMessageDialog(null, "I've picked an integer between " + String.valueOf(bottom) + " and " + String.valueOf(top) + ".");
     while (true){
-      int guess = Integer.parseInt(JOptionPane.showInputDialog("Take a guess! (" + String.valueOf(bottom) + "-" + String.valueOf(bottom) + ")"));
+      int guess = Integer.parseInt(JOptionPane.showInputDialog("Take a guess! (" + String.valueOf(bottom) + "-" + String.valueOf(top) + ")"));
       if(guess == value){
         JOptionPane.showMessageDialog(null, "Congratulations! You've successfully guessed my number.");
         break;
