@@ -14,7 +14,7 @@ class assignmentSeventeen {
         rolls[i] = dice[i].roll();
       }
       int sum = rolls[0] + rolls[1];
-      String output = "You rolled " + String.valueOf(rolls[0]) + " and " + String.valueOf(rolls[1]) + ". The sum it " + String.valueOf(sum);
+      String output = "You rolled " + String.valueOf(rolls[0]) + " and " + String.valueOf(rolls[1]) + ". The sum is " + String.valueOf(sum);
       JOptionPane.showMessageDialog(null, output);
       int state = 0;
       for (int num : winningNumbers) if (num==sum) state = 1; // this is disgusting lol
