@@ -47,8 +47,8 @@ class assignmentThirteen
     //If the character occurs less than 2 times it returns -1.
     public static int SecondCharPosition(String str, String Charr)
     {
-      var position = 0;
-      var counter = 0;
+      int position = 0;
+      int counter = 0;
       while (counter < 1){
         position = str.indexOf(Charr, position+1);
         counter++;
