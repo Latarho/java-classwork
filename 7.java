@@ -2,7 +2,6 @@
 class assignmentSeven{
   public static void main(String[] args){
     if(args.length == 0){
-      System.err.println("You need to specify an action via command-line parameters. I'm not listing them here; go check the source and figure it out.");
       System.exit(1);
     }
     String action = args[0].trim();
