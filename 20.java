@@ -10,7 +10,7 @@ class assignmentTwenty
 
 
    public static void sort(int numArray[])
-   { // I believe this is called a "heap sort"? I read about this somewhere, but I'm not sure I remembered it correctly.
+   { // I believe this is called a "bubble sort"? I read about this somewhere, but I'm not sure I remembered it correctly.
      boolean dirty = false;
      do{
       dirty = false; // Assumes there is nothing out of place until it finds it
