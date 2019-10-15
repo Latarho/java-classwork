@@ -32,20 +32,16 @@ class assignmentTwentyEight
 		//  removeDoubles("baaaa") returns "b";
 		//  removeDoubles("") returns ""
 		String result = "";
-		for(int i = 0; i < str.length(); i++){
-			if(i==0){
-				if(str.charAt(i) != str.charAt(i+1)){
-					result += str.charAt(i);
-				}
-			} else if (i==str.length()-1){
-				if(str.charAt(i) != str.charAt(i-1)){
-					result += str.charAt(i);
-				}
-			} else {
-				if(str.charAt(i) != str.charAt(i-1) && str.charAt(i) != str.charAt(i+1)){
+		for(int i = 0; i < str.length()-1; i++){
+			if(result.length() > 0){
+				if(str.charAt(i) == result.charAt(result.length()-1)){
+					result = result.substring(0,result.length()-1);
+					i++;
+				} else {
 					result += str.charAt(i);
 				}
 			}
+			else result += str.charAt(i);
 		}
 		return result;
 	}
@@ -60,23 +56,16 @@ class assignmentTwentyEight
 		//  removeDoublesOrMore("baaaa") returns "b";
 		//  removeDoublesOrMore("") returns ""
 		String result = "";
-		char lastCharacter = str.charAt(0);
-		result += str.charAt(0);
-		for(int i = 1; i < str.length(); i++){
-			if(i == str.length()-1){
-				if (str.charAt(i) != lastCharacter) {
-					result += str.charAt(i);
-					lastCharacter = str.charAt(i);
-				}
-			} else {
-				if (str.charAt(i) != lastCharacter && str.charAt(i+1) != str.charAt(i)) {
-					result += str.charAt(i);
-					lastCharacter = str.charAt(i);
-
-			}
+		if(str.length() < 2) return ""; // special case
+		if(str.charAt(0) != str.charAt(1))
+			result += str.charAt(0);
+		for(int i = 1; i < str.length()-1; i++){
+			if(str.charAt(i) == str.charAt(i+1) || str.charAt(i) == str.charAt(i-1));
+			else result += str.charAt(i);
 		}
+		if(str.charAt(str.length()-1) != str.charAt(str.length()-2))
+			result += str.charAt(str.length()-1);
 		return result;
-
 	}
 
 
