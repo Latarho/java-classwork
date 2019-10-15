@@ -51,14 +51,14 @@ class assignmentTwelve
     static void factorial(int n)
     {
 
-      int total = 0;
-      for(int i = 0; i < n + 1; i++){
-        total += i;
+      long total = 1;
+      for(int i = 1; i <= n; i++){
+        total *= i;
       }
       System.out.println(total);
 
     	System.out.println();   // Leaves space between the outputs
-        System.out.println();
+      System.out.println();
     }
 
 
@@ -107,7 +107,7 @@ class assignmentTwelve
     // This is a solution to part (v)
     static void primeNumbers(int n)
     {
-      ArrayList<Integer> primes = new ArrayList(); // the linter doesn't like this, but it works lol
+      ArrayList<Integer> primes = new ArrayList(); // the compiler doesn't like this, but it works lol
       primes.add(2);
       int primeCounter = 1;
       for(int i = 3; i < n+1; i++){
