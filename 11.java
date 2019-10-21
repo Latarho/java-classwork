@@ -29,7 +29,7 @@ class AssignmentEleven{
       }
     }
     similarity += "There are " + String.valueOf(equalityCounter) + " equal roll(s).";
-    output = String.join("\n", results, similarity);
+    output = results+"\n"+similarity;
     javax.swing.JOptionPane.showMessageDialog(null, output);
   }
 }
