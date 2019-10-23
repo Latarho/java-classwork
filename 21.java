@@ -16,7 +16,7 @@ class assignmentTwentyOne{ // Done in *nine* semicolons, one of which isn't abso
       {"I","1"}
     };
     int input = Integer.parseInt(javax.swing.JOptionPane.showInputDialog(null,"Input a number")); // Saves a semicolon by using a direct reference instead of an import.
-    int originalInput = input; // This semicolon is only required to keep track of this for later.
+    int originalInput = input; // This semicolon is only required to keep track of this for later; could be removed.
     String output = "";
     for(int i = 0; i < numerals.length; i++){
       while(input>=Integer.parseInt(numerals[i][1])){

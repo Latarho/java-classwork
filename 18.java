@@ -37,6 +37,7 @@ class assignmentEighteen
 
         //Adds "value" to each element in the array. It prints the new values to the screen
         //"intArray" should remain unchanged
+      System.out.println("Add 7 to each value");
     	value = 7;
     	addToValues(intArray, value);
     	System.out.println();
@@ -44,6 +45,7 @@ class assignmentEighteen
 
     	//replaces "value" with "newValue". If the "value" is not in the array
         // it returns the array unchanged
+      System.out.println("Replace 7 with 1000");
     	int newValue = 1000;
     	    value = 7;
     	replaceValue(intArray, value, newValue);
@@ -52,12 +54,14 @@ class assignmentEighteen
 
     	//Removes all occurrence of "value" in the array. If the "value" is not in the
     	//array, it returns the array unchanged.
+      System.out.println("Remove 7");
     	value = 7;
     	removeElement(intArray,value);
 
 
         //Reverses the contents of the array. The array remains unchanged
         //It prints the reversed array to the screen
+        System.out.println("Reverse");
         reverseArray(intArray);
 
 
@@ -122,9 +126,9 @@ class assignmentEighteen
 
    	static void addToValues(int[] A, int val)
    	{
-   		int[] tempArray = A;
+   		int[] tempArray = new int[A.length];
       for(int i = 0; i < A.length; i++){
-        tempArray[i] += val;
+        tempArray[i] = A[i]+val;
       }
    		printArray(tempArray);    //Prints the updated array to the screen
    	}
@@ -135,10 +139,12 @@ class assignmentEighteen
     static void replaceValue(int[] A, int val, int newVal)
     {
 
-   		int[] tempArray = A;
+   		int[] tempArray = new int[A.length];
       for(int i = 0; i < A.length; i++){
         if(A[i] == val){
           tempArray[i] = newVal;
+        } else {
+          tempArray[i] = A[i];
         }
       }
    		printArray(tempArray); //Prints the updated array to the screen

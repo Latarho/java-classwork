@@ -23,7 +23,7 @@ class assignmentSixteen
 		String replacement = "X";
 		int progress = 0;
 		while(true){
-			int index = str.indexOf(c,progress+1);
+			int index = str.indexOf(c,progress);
 			if(index==-1) break;
 			String start = result.substring(0, index);
 			String middle = replacement;
@@ -47,7 +47,7 @@ class assignmentSixteen
 		String[] replacements = new String[]{"X", "Y", "Z"};
 		int progress = 0;
 		while(true){
-			int index = str.indexOf(c,progress+1);
+			int index = str.indexOf(c,progress);
 			if(index==-1) break;
 			String start = result.substring(0, index);
 			String middle = replacements[counter%3];
@@ -75,7 +75,7 @@ class assignmentSixteen
 			String middle = replacement;
 			String end = result.substring(index+word.length());
 			result = start+middle+end;
-			progress=index+word.length()-1;
+			progress=index+word.length()-2;
 		}
 		return result;
 	}

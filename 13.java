@@ -32,8 +32,8 @@ class assignmentThirteen
     public static String GetAndStoreInput()
     {
       String result = "";
-    	while(!result.matches(".*[Xx].*")){
-        result = JOptionPane.showInputDialog("Input x or X");
+    	while(!result.matches(".*[Xx]")){
+        result += JOptionPane.showInputDialog("Input x or X");
         // if(result.matches("[xX]")) break;
       }
       return result;
