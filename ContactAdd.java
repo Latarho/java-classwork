@@ -102,7 +102,7 @@ public static void sortContacts(Contact[] list){
 public static void modifyContact(Contact[] list){
 	int targetIndex = Integer.parseInt(JOptionPane.showInputDialog(null,"Select the target"))-1;
 	Contact target = list[targetIndex];
-	String[] options = {"First Name","Last Name","Number"};
+	// String[] options = {"First Name","Last Name","Number"};
 	String targetProperty = JOptionPane.showInputDialog(null,target.getFirstName() + " " + target.getLastName() + "\n" + target.getMobilePhoneNum() + "\n" + "Which property would you like to modify?");
 	switch (targetProperty) {
 		case "First Name":{
