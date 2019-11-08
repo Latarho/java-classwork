@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Binary",
+            "request": "launch",
+            "mainClass": "Binary",
+            "projectName": "general-repo_fee01836"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AccountsRunner",
+            "request": "launch",
+            "mainClass": "AccountsRunner",
+            "projectName": "general-repo_fee01836"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AccountsRunner",
+            "request": "launch",
+            "mainClass": "ap1.AccountsRunner",
+            "projectName": "general-repo_fee01836"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - assignmentTwentyOne",
+            "request": "launch",
+            "mainClass": "assignmentTwentyOne",
+            "projectName": "general-repo_fee01836"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"

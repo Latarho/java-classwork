@@ -16,7 +16,7 @@ public class BallFrame extends JFrame
 
 	public BallFrame()
 	{
-		super("This is a little physics thingy");
+		super("This is garbage");
 
 		setSize(WIDTH,HEIGHT);
 		setBackground(Color.WHITE);
