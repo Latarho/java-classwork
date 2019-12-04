@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ArrayListLab",
+            "request": "launch",
+            "mainClass": "ArrayListLab",
+            "projectName": "general-repo_fee01836"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Binary",
             "request": "launch",
             "mainClass": "Binary",
