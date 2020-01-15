@@ -47,54 +47,29 @@ public class Board {
   public boolean isWin(int player) {
     // Cardinal checks
     int[] rowCounters = new int[game.length];
+    int[] diagonalCounters = new int[game.length + game[0].length];
+    int[] diagonalCounters2 = new int[game.length + game[0].length];
     for (int x = 0; x < game.length; x++) {
       int count = 0;
       for (int y = 0; y < game[x].length; y++) {
         if (game[x][y] == player) {
           count++;
           rowCounters[y]++;
+          diagonalCounters[x + y]++;
+          diagonalCounters2[game[0].length + x - y]++;
           if (count >= 4)
             return true;
           if (rowCounters[y] >= 4)
             return true;
+          if (diagonalCounters[x + y] >= 4)
+            return true;
+          if (diagonalCounters2[game[0].length + x - y] >= 4)
+            return true;
         } else {
           count = 0;
           rowCounters[y] = 0;
-        }
-      }
-    }
-    // Diagonal checks
-    for (int offset = -game.length; offset < game.length; offset++) {
-      int counter = 0;
-      for (int x = 0; x < game.length; x++) {
-        try {
-          if (game[x][x + offset] == player) {
-            counter++;
-            if (counter > 4)
-              return true;
-          } else {
-            counter = 0;
-          }
-        } catch (Exception e) {
-          // "Premature optimization is the root of all evil" - Donald Knuth
-        }
-      }
-
-    }
-    // The same thing, but reversed along the x axis
-    for (int offset = -game.length; offset < game.length; offset++) {
-      int counter = 0;
-      for (int x = 0; x < game.length; x++) {
-        try {
-          if (game[game.length - (x + 1)][x + offset] == player) {
-            counter++;
-            if (counter > 4)
-              return true;
-          } else {
-            counter = 0;
-          }
-        } catch (Exception e) {
-          // "`try` has almost no expense at all" - Patashu on StackOverflow
+          diagonalCounters[x + y] = 0;
+          diagonalCounters2[game[0].length + x - y] = 0;
         }
       }
     }
