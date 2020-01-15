@@ -18,8 +18,14 @@ public class AccountsRunner {
     for (int i = 0; i < count; i++) {
       String name = JOptionPane.showInputDialog(null, "Input a name for contact " + (i + 1));
       String number = JOptionPane.showInputDialog(null, "Input a number for contact " + (i + 1));
-      double balance = Double.parseDouble(JOptionPane.showInputDialog(null, "Input a balance for contact " + (i + 1)));
-      accounts[i] = new Account(name, number, balance);
+      try {
+        double balance = Double
+            .parseDouble(JOptionPane.showInputDialog(null, "Input a balance for contact " + (i + 1)));
+        accounts[i] = new Account(name, number, balance);
+      } catch (NullPointerException e) {
+        System.err.println("Empty input, exiting");
+        System.exit(1);
+      }
     }
     for (int i = 0; i < count; i++) {
       System.out.println(accounts[i]);
