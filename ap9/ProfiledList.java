@@ -19,11 +19,31 @@ public class ProfiledList<E> extends java.util.ArrayList<E> {
 		return super.set(i, e);
 	}
 
+	@Override
+	public void add(int i, E e) {
+		writes++;
+		super.add(i, e);
+	}
+
+	@Override
+	public E remove(int i) {
+		writes++;
+		return super.remove(i);
+	}
+
 	public void startTimer() {
 		startTime = System.currentTimeMillis();
 	}
 
 	public void endTimer() {
 		elapsed = System.currentTimeMillis() - startTime;
+	}
+
+	public void fill(E[] array) {
+		for (int i = 0; i < array.length; i++) {
+			this.add(array[i]);
+		}
+		reads = 0;
+		writes = 0;
 	}
 }
