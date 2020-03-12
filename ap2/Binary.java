@@ -47,7 +47,7 @@ public class Binary {
 		System.out.println("Integer from binary: " + fromBin(fromString(bin)));
 	}
 
-	public static boolean[] toBin(int in) {
+	static boolean[] toBin(int in) {
 		boolean[] result;
 		{
 			double natLogIn = Math.log(Math.abs(in));
@@ -76,14 +76,14 @@ public class Binary {
 		return result;
 	}
 
-	public static String binString(boolean[] in) {
+	static String binString(boolean[] in) {
 		String out = "";
 		for (boolean b : in)
 			out += b ? "1" : "0";
 		return out;
 	}
 
-	public static boolean[] fromString(String in) {
+	static boolean[] fromString(String in) {
 		if (!in.matches("^[10]*$"))
 			throw new Error("Invalid binary string");
 		boolean[] out = new boolean[in.length()];
@@ -93,7 +93,7 @@ public class Binary {
 		return out;
 	}
 
-	public static int fromBin(boolean[] in) {
+	static int fromBin(boolean[] in) {
 		int dist = 0;
 		for (int i = 1; i < in.length; i++) {
 			dist += Math.pow(2, in.length - (i + 1));
