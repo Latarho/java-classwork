@@ -8,25 +8,25 @@ public class ProfiledList<E> extends java.util.ArrayList<E> {
 	public long elapsed = 0;
 
 	@Override
-	public E get(int i) {
+	public E get(final int i) {
 		reads++;
 		return super.get(i);
 	}
 
 	@Override
-	public E set(int i, E e) {
+	public E set(final int i, final E e) {
 		writes++;
 		return super.set(i, e);
 	}
 
 	@Override
-	public void add(int i, E e) {
+	public void add(final int i, final E e) {
 		writes++;
 		super.add(i, e);
 	}
 
 	@Override
-	public E remove(int i) {
+	public E remove(final int i) {
 		writes++;
 		return super.remove(i);
 	}
@@ -39,7 +39,7 @@ public class ProfiledList<E> extends java.util.ArrayList<E> {
 		elapsed = System.currentTimeMillis() - startTime;
 	}
 
-	public void fill(E[] array) {
+	public void fill(final E[] array) {
 		for (int i = 0; i < array.length; i++) {
 			this.add(array[i]);
 		}

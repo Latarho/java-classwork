@@ -7,7 +7,7 @@ public class Sorts {
 	static int COUNT = 10; // Number of samples to run
 	static int LENGTH = 4096; // Length of the arrays
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		if (args.length > 0) {
 			// yes, I did implement user input. here it is. you can even determine how many
 			// tests get run on each sort.
@@ -23,12 +23,12 @@ public class Sorts {
 			}
 		}
 		// System.err.println("Running bubble sorts...");
-		int[] reads = new int[COUNT];
-		int[] writes = new int[COUNT];
-		long[] times = new long[COUNT];
+		final int[] reads = new int[COUNT];
+		final int[] writes = new int[COUNT];
+		final long[] times = new long[COUNT];
 		for (int i = 0; i < arrays.length; i++) {
 			// System.err.println("Bubble sort " + i + "...");
-			ProfiledList<Integer> result = bubble(arrays[i]);
+			final ProfiledList<Integer> result = bubble(arrays[i]);
 			reads[i] = result.reads;
 			writes[i] = result.writes;
 			times[i] = result.elapsed;
@@ -51,7 +51,7 @@ public class Sorts {
 		// System.err.println("Running selection sorts...");
 		for (int i = 0; i < arrays.length; i++) {
 			// System.err.println("Selection sort " + i + "...");
-			ProfiledList<Integer> result = selection(arrays[i]);
+			final ProfiledList<Integer> result = selection(arrays[i]);
 			reads[i] = result.reads;
 			writes[i] = result.writes;
 			times[i] = result.elapsed;
@@ -74,7 +74,7 @@ public class Sorts {
 		// System.err.println("Running insertion sorts...");
 		for (int i = 0; i < arrays.length; i++) {
 			// System.err.println("Insertion sort " + i + "...");
-			ProfiledList<Integer> result = insertion(arrays[i]);
+			final ProfiledList<Integer> result = insertion(arrays[i]);
 			reads[i] = result.reads;
 			writes[i] = result.writes;
 			times[i] = result.elapsed;
@@ -96,8 +96,8 @@ public class Sorts {
 		System.out.println("insertionCompute: " + avgTime);
 	}
 
-	static ProfiledList<Integer> bubble(Integer[] array) {
-		ProfiledList<Integer> result = new ProfiledList<Integer>();
+	static ProfiledList<Integer> bubble(final Integer[] array) {
+		final ProfiledList<Integer> result = new ProfiledList<Integer>();
 		result.fill(array);
 		result.startTimer();
 		boolean dirty = false;
@@ -105,7 +105,7 @@ public class Sorts {
 			dirty = false;
 			for (int i = 0; i < result.size() - 1; i++) {
 				if (result.get(i) > result.get(i + 1)) {
-					Integer tmp = result.get(i);
+					final Integer tmp = result.get(i);
 					result.set(i, result.get(i + 1));
 					result.set(i + 1, tmp);
 					dirty = true;
@@ -116,15 +116,15 @@ public class Sorts {
 		return result;
 	}
 
-	static ProfiledList<Integer> selection(Integer[] array) {
-		ProfiledList<Integer> result = new ProfiledList<Integer>();
+	static ProfiledList<Integer> selection(final Integer[] array) {
+		final ProfiledList<Integer> result = new ProfiledList<Integer>();
 		result.fill(array);
 		result.startTimer();
 		for (int sortedIndices = 0; sortedIndices < result.size(); sortedIndices++) {
 			int minIndex = -1;
 			int minValue = 0;
 			for (int i = sortedIndices; i < result.size(); i++) {
-				int val = result.get(i);
+				final int val = result.get(i);
 				if (val < minValue || minIndex == -1) {
 					minValue = val;
 					minIndex = i;
@@ -137,12 +137,12 @@ public class Sorts {
 		return result;
 	}
 
-	static ProfiledList<Integer> insertion(Integer[] array) {
-		ProfiledList<Integer> result = new ProfiledList<Integer>();
+	static ProfiledList<Integer> insertion(final Integer[] array) {
+		final ProfiledList<Integer> result = new ProfiledList<Integer>();
 		result.fill(array);
 		result.startTimer();
 		for (int i = 1; i < result.size(); ++i) {
-			int val = result.get(i);
+			final int val = result.get(i);
 			if (val < result.get(i - 1)) { // This element isn't sorted
 				int tgt = i - 1;
 				for (; tgt > 0; tgt--)
@@ -156,9 +156,9 @@ public class Sorts {
 		return result;
 	}
 
-	static int isSorted(ProfiledList<Integer> list) {
-		int reads = list.reads;
-		int writes = list.writes;
+	static int isSorted(final ProfiledList<Integer> list) {
+		final int reads = list.reads;
+		final int writes = list.writes;
 		for (int i = 1; i < list.size() - 1; ++i) {
 			if (list.get(i) < list.get(i - 1) || list.get(i) > list.get(i + 1)) {
 				return i;
