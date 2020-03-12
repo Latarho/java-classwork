@@ -4,46 +4,60 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - ArrayListLab",
-            "request": "launch",
-            "mainClass": "ArrayListLab",
-            "projectName": "general-repo_fee01836"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Binary",
-            "request": "launch",
-            "mainClass": "Binary",
-            "projectName": "general-repo_fee01836"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - AccountsRunner",
-            "request": "launch",
-            "mainClass": "AccountsRunner",
-            "projectName": "general-repo_fee01836"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - AccountsRunner",
-            "request": "launch",
-            "mainClass": "ap1.AccountsRunner",
-            "projectName": "general-repo_fee01836"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - assignmentTwentyOne",
-            "request": "launch",
-            "mainClass": "assignmentTwentyOne",
-            "projectName": "general-repo_fee01836"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch) - Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        }
-    ]
+					{
+						"type": "java",
+						"name": "CodeLens (Launch) - Sorts",
+						"request": "launch",
+						"mainClass": "Sorts",
+						"projectName": "general-repo_fee01836"
+					},
+					{
+						"type": "java",
+						"name": "CodeLens (Launch) - Determinant",
+						"request": "launch",
+						"mainClass": "Determinant",
+						"projectName": "general-repo_fee01836"
+					},
+					{
+						"type": "java",
+						"name": "CodeLens (Launch) - ArrayListLab",
+						"request": "launch",
+						"mainClass": "ArrayListLab",
+						"projectName": "general-repo_fee01836"
+					},
+					{
+						"type": "java",
+						"name": "CodeLens (Launch) - Binary",
+						"request": "launch",
+						"mainClass": "Binary",
+						"projectName": "general-repo_fee01836"
+					},
+					{
+						"type": "java",
+						"name": "CodeLens (Launch) - AccountsRunner",
+						"request": "launch",
+						"mainClass": "AccountsRunner",
+						"projectName": "general-repo_fee01836"
+					},
+					{
+						"type": "java",
+						"name": "CodeLens (Launch) - AccountsRunner",
+						"request": "launch",
+						"mainClass": "ap1.AccountsRunner",
+						"projectName": "general-repo_fee01836"
+					},
+					{
+						"type": "java",
+						"name": "CodeLens (Launch) - assignmentTwentyOne",
+						"request": "launch",
+						"mainClass": "assignmentTwentyOne",
+						"projectName": "general-repo_fee01836"
+					},
+					{
+						"type": "java",
+						"name": "Debug (Launch) - Current File",
+						"request": "launch",
+						"mainClass": "${file}"
+					}
+				]
 }
