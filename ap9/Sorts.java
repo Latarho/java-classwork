@@ -16,10 +16,7 @@ public class Sorts {
 		}
 		System.out.println("trialCount: " + COUNT);
 		System.out.println("arrayLength: " + LENGTH);
-		// System.err.println("Generating ten 4096-element arrays...");
-		// stderr is used for logging as per unix best practices to allow users to
-		// easily pipe results to a file. (this outputs valid yaml to stdout)
-		Integer arrays[][] = new Integer[COUNT][LENGTH];
+		final Integer arrays[][] = new Integer[COUNT][LENGTH];
 		for (int array = 0; array < arrays.length; array++) {
 			for (int i = 0; i < arrays[array].length; i++) {
 				arrays[array][i] = (int) Math.round(Math.random() * LENGTH);
