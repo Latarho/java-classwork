@@ -4,10 +4,18 @@
  */
 public class Sorts {
 
-	static final int COUNT = 10; // Number of samples to run
-	static final int LENGTH = 4096; // Length of the arrays
+	static int COUNT = 10; // Number of samples to run
+	static int LENGTH = 4096; // Length of the arrays
 
 	public static void main(String[] args) {
+		if (args.length > 0) {
+			// yes, I did implement user input. here it is. you can even determine how many
+			// tests get run on each sort.
+			COUNT = Integer.parseInt(args[0]);
+			LENGTH = Integer.parseInt(args[1]);
+		}
+		System.out.println("trialCount: " + COUNT);
+		System.out.println("arrayLength: " + LENGTH);
 		// System.err.println("Generating ten 4096-element arrays...");
 		// stderr is used for logging as per unix best practices to allow users to
 		// easily pipe results to a file. (this outputs valid yaml to stdout)
