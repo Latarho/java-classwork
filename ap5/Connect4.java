@@ -1,3 +1,4 @@
+package ap5;
 
 /**
  * Connect4.java
@@ -37,8 +38,8 @@ public class Connect4 {
 		while (!(c4.isWin(1) || c4.isWin(2) || c4.isFull())) {
 			boolean legit = false;
 			while (!legit) {
-				turnStr = (String) JOptionPane.showInputDialog(null, c4 + "\nHuman, which column?", "",
-						JOptionPane.PLAIN_MESSAGE, null, options, null);
+				turnStr = (String) JOptionPane.showInputDialog(null, c4 + "\nHuman, which column?", "", JOptionPane.PLAIN_MESSAGE,
+						null, options, null);
 				turn = Integer.parseInt(turnStr);
 				legit = c4.takeATurn(1, turn);
 				if (!legit)

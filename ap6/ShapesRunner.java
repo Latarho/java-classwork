@@ -1,3 +1,4 @@
+package ap6;
 
 /**
  * @(#)ShapesRunner.java

@@ -9,6 +9,13 @@
 						"name": "CodeLens (Launch) - Sorts",
 						"request": "launch",
 						"mainClass": "Sorts",
+						"projectName": "java-classwork_82907098"
+					},
+					{
+						"type": "java",
+						"name": "CodeLens (Launch) - Sorts",
+						"request": "launch",
+						"mainClass": "Sorts",
 						"projectName": "general-repo_fee01836"
 					},
 					{

@@ -1,3 +1,5 @@
+package ap6;
+
 import java.awt.Color;
 import javax.swing.*;
 import java.awt.*;
@@ -31,8 +33,8 @@ public class Triangle extends JComponent implements Shapes {
 	}
 
 	public double Perimeter() {
-		var a = width;
-		var b = Math.sqrt(Math.pow(width / 2, 2) + Math.pow(height, 2));
+		float a = width;
+		double b = Math.sqrt(Math.pow(width / 2, 2) + Math.pow(height, 2));
 		return a + 2 * b;
 	}
 

@@ -1,3 +1,5 @@
+package ap4;
+
 /**
  * ClimbInfo.java
  *
@@ -9,35 +11,32 @@
  *
  */
 
-
-
-public class ClimbInfo
-{
+public class ClimbInfo {
 	private String peakName;
 	private int time;
 
-	/* Creates Climbo object with name peakName and time climbTime.
-	 * PeakName : the name of the mountain peak
-	 * climbTime the number of minutes taken to complete the climb
+	/*
+	 * Creates Climbo object with name peakName and time climbTime. PeakName : the
+	 * name of the mountain peak climbTime the number of minutes taken to complete
+	 * the climb
 	 */
-    public ClimbInfo(String pName, int climbTime)
-    {
-    	peakName = pName;
-    	time = climbTime;
-    }
+	public ClimbInfo(String pName, int climbTime) {
+		peakName = pName;
+		time = climbTime;
+	}
 
-    /* Return the name of the mountain peak
-     */
-    public String getName()
-    {
-    	return peakName;
-    }
+	/*
+	 * Return the name of the mountain peak
+	 */
+	public String getName() {
+		return peakName;
+	}
 
-    /* Return the number of minutes taken to complete the climb
-     */
-    public int getTime()
-    {
-    	return time;
-    }
+	/*
+	 * Return the number of minutes taken to complete the climb
+	 */
+	public int getTime() {
+		return time;
+	}
 
 }

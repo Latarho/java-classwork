@@ -268,7 +268,7 @@ public class Sorts {
 			else
 				temp[copied++] = data.get(first + n1 + (copied2++));
 		}
-		// Copy any remaining entries in the left and right subarrays.
+		// Copy any remaining entries in the left and right sub-arrays.
 		while (copied1 < n1)
 			temp[copied++] = data.get(first + (copied1++));
 		while (copied2 < n2)

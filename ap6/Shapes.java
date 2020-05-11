@@ -1,3 +1,5 @@
+package ap6;
+
 /**
  * @(#)Shapes.java
  *
